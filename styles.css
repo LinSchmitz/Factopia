@@ -111,6 +111,7 @@ ul {
   margin-left: 10px;
   color: var(--background-color);
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .source:hover,
