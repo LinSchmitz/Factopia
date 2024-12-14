@@ -4,14 +4,14 @@
   --background-color: #808080; /* Gainsboro Gray */
 
   --hover-color: #663399;
-  --blue-color: "#aec6cf";
-  --green-color: "#77dd77";
-  --orange-color: "#ff6961";
-  --Lemon-color: "#fdfd96";
-  --Pink-color: "#ffb7ce";
-  --PowderBlue-color: "#b0e0e6";
-  --BlushRed-color: "#ffcccb";
-  --Lavender-color: "#dcbdfb";
+  --blue-color: #aec6cf;
+  --LightAqua-color: #80e1dd;
+  --Pink-color: #feb1ef;
+  --BlushRed-color: #fed4d0;
+  --green-color: #77dd77;
+  --orange-color: #ffc861;
+  --Lemon-color: #fdfd96;
+  --Lavender-color: #dcbdfb;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 
 .container {
   max-width: 1000px;
-  /* background-color: rgb(255, 200, 97); */
+  /* background-color: #ffc861; */
   margin: 0 auto;
 }
 
@@ -117,4 +117,25 @@ ul {
 .source:hover,
 .source:active {
   color: var(--hover-color);
+}
+
+.btn {
+  font-size: 1.1rem;
+  font-family: "Coiny", sans-serif;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    135deg,
+    #77dd77,
+    #aec6cf,
+    #feb1ef,
+    #ffc861,
+    #fdfd96
+  );
+  border: none;
+  padding: 1rem 0 13px;
+}
+
+.btn-large {
+  font-size: 1.5rem;
+  padding: 20px 32px 17px;
 }
