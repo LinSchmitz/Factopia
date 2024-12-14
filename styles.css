@@ -74,6 +74,10 @@ h1 {
   line-height: 1;
 }
 
+.category {
+  margin-bottom: 1rem;
+}
+
 .fact {
   font-size: 1.2rem;
   line-height: 1.4;
@@ -133,9 +137,24 @@ ul {
   );
   border: none;
   padding: 1rem 0 13px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
 }
 
 .btn-large {
   font-size: 1.5rem;
   padding: 20px 32px 17px;
+}
+
+.btn-all {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.btn-sub {
+  width: 100%;
+  background-image: none;
 }
