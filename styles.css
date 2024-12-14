@@ -1,17 +1,18 @@
 :root {
   --text-color: #f5f5f5; /* Text color */
-  --box-color: #a9a9a9;
-  --background-color: #808080; /* Gainsboro Gray */
+  --box-color: #78716c; /* stone 500 */
+  --background-color: #57534e; /* Gainsboro Gray */
+  --dark-color: #44403c; /* stone 700 */
+  --stone600-color: #57534e;
 
-  --hover-color: #663399;
-  --blue-color: #aec6cf;
-  --LightAqua-color: #80e1dd;
-  --Pink-color: #feb1ef;
-  --BlushRed-color: #fed4d0;
-  --green-color: #77dd77;
-  --orange-color: #ffc861;
-  --Lemon-color: #fdfd96;
-  --Lavender-color: #dcbdfb;
+  --hover-color: #7e22ce;
+
+  --orange-color: #fed7aa;
+  --lime-color: #d9f99d;
+  --green-color: #bbf7d0;
+  --ingigo-color: #c7d2fe;
+  --violet-color: #ddd6fe; /* violet300 */
+  --pink-color: #fbcfe8;
 }
 
 * {
@@ -29,7 +30,6 @@ body {
 
 .container {
   max-width: 1000px;
-  /* background-color: #ffc861; */
   margin: 0 auto;
 }
 
@@ -100,6 +100,7 @@ h1 {
   font-family: "Coiny", sans-serif;
   color: var(--background-color);
   padding: 3px 10px 0 10px;
+  border-radius: 100px;
 }
 
 .vote-button {
@@ -129,13 +130,16 @@ ul {
   text-transform: uppercase;
   background-image: linear-gradient(
     135deg,
-    #77dd77,
-    #aec6cf,
-    #feb1ef,
-    #ffc861,
-    #fdfd96
+    #fed7aa,
+    #d9f99d,
+    #bbf7d0,
+    #c7d2fe,
+    #ddd6fe,
+    #fbcfe8
   );
   border: none;
+  border-radius: 100px;
+  cursor: pointer;
   padding: 1rem 0 13px;
   transition: all 0.3s;
 }
