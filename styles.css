@@ -14,7 +14,13 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Sono", sans-serif;
-  padding: 2.5rem;
+  padding: 2.5rem 3.5rem;
+}
+
+.container {
+  max-width: 1000px;
+  /* background-color: rgb(255, 200, 97); */
+  margin: 0 auto;
 }
 
 .header {
@@ -32,6 +38,11 @@ body {
   gap: 1rem;
 }
 
+.logo img {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
 .fact-form {
   background-color: var(--box-color);
   margin-bottom: 2rem;
@@ -42,6 +53,7 @@ body {
 .main {
   display: grid;
   grid-template-columns: 16rem 2fr;
+  gap: 3rem;
 }
 
 h1 {
