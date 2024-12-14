@@ -53,9 +53,14 @@ h1 {
   background-color: var(--box-color);
   margin-bottom: 1rem;
   padding: 1rem 1.2rem;
+  letter-spacing: -1px;
 
   border: none;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .tag {
@@ -64,6 +69,10 @@ h1 {
   font-family: "Coiny", sans-serif;
   color: var(--background-color);
   padding: 3px 10px 0 10px;
+}
+
+.vote-button {
+  margin-left: auto;
 }
 
 ul {
