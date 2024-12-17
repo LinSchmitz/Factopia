@@ -211,6 +211,10 @@ ul {
   background-image: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @media (max-width: 1200px) {
   .fact {
     flex-direction: column;
