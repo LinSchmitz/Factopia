@@ -40,6 +40,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--stone500-color);
+  border-radius: 1rem;
 }
 
 .logo {
@@ -56,9 +57,37 @@ body {
 .fact-form {
   background-color: var(--stone500-color);
   margin-bottom: 2rem;
-  padding: 1rem 1.2rem;
-  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
 }
+
+.fact-form input,
+.fact-form select {
+  width: 14rem;
+  padding: 1rem;
+  color: inherit;
+  font-family: inherit;
+  background-color: var(--stone400-color);
+  border: none;
+  border-radius: 100px;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 1.1rem;
+}
+
+/* .fact-form input::placeholder {
+  color: var(--stone200-color);
+} */
 
 .main {
   display: grid;
@@ -87,7 +116,7 @@ h1 {
   letter-spacing: -1px;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
