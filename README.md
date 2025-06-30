@@ -7,7 +7,7 @@
 - Storing the data in a Supabase database
 - JavaScript
 - React
-- Deploy the app in Netlify.Vercel
+- Deploy the app in Netlify/Vercel
 
 ### Overview of the functions of the website
 
