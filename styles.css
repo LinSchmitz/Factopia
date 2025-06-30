@@ -1,33 +1,55 @@
 :root {
-  --background-color: #44403c; /* stone 700 */
-  --stone600-color: #57534e;
-  --stone500-color: #78716c;
-  --stone400-color: #a8a29e;
-  --stone200-color: #e7e5e4;
+  /* 🎨 Base Backgrounds and Stone Tones */
+  --background-color: #44403c; /* stone-700 */
+  --stone-600: #57534e;
+  --stone-500: #78716c;
+  --stone-400: #a8a29e;
+  --stone-200: #e7e5e4;
 
+  /* ⚪️ Neutrals & Lights */
+  --white-pure: #ffffff;
+  --white-smoke: #f0f0f3;
+  --light: #fffef9;
+  --pearl: #f8f7f3;
+  --fog: #e6e7eb;
+  --cloud-grey: #d8d8d8;
+
+  /* 🩶 Greys */
+  --grey: #80817f;
+  --color-test: #9c9c9c;
+  --warm-grey: #a0a09e;
+  --soft-charcoal: #5f5f5f;
+  --steel-grey: #6a6c70;
+
+  /* 🌫 Shadows & Transparency */
+  --shadow: #c7c2b366;
+  --transparent: #fff0;
+
+  /* 💙 Blues */
+  --cornflower-blue: #85a4c4;
+  --blue-catchy: #4943f0;
+  --sky-mist: #a1b8e0;
+  --deep-indigo: #3b3fce;
+  --storm-blue: #617d98;
+
+  /* 💚 Cool Muted Vibrants */
+  --light-steel-blue: #02aab0;
+  --plum: #00cdac;
+  --teal-ice: #8be0dc;
+  --cool-mint: #9de1d7;
+  --dusky-lavender: #7f9fbf;
+
+  /* 💜  Accent Colors */
   --hover-color: #7e22ce;
-
   --orange-color: #fed7aa;
   --lime-color: #d9f99d;
   --green-color: #bbf7d0;
-  --ingigo-color: #c7d2fe;
-  --violet-color: #ddd6fe; /* violet300 */
+  --indigo-color: #c7d2fe;
+  --violet-color: #ddd6fe;
   --pink-color: #fbcfe8;
-
-  /* adrien  */
-
-  --white-smoke: #f0f0f3;
-  --cornflower-blue: #85a4c4;
-  --light-slate-grey: #7889b3;
-  --white-0: #ffffff;
-  --grey: #80817f;
-  --light-steel-blue: #02aab0;
-  --plum: #00cdac;
-  --blue-catchy: #4943f0;
-  --light: #fffef9;
-  --shadow: #c7c2b366;
-  --transparent: #fff0;
-  --color-test: #9c9c9c;
+  --dusty-rose: #e0a9b0;
+  --muted-gold: #d6c589;
+  --sage-green: #a6b8a1;
 }
 
 * {
@@ -40,7 +62,6 @@ body {
   background-color: var(--white-smoke);
   color: var(--cornflower-blue);
   font-family: 'Sono', sans-serif;
-  padding: 1.5rem 3.5rem;
 }
 
 .container {
@@ -49,22 +70,19 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #fff;
+  z-index: 1000;
 
+  width: 100%;
   margin-bottom: 2rem;
   padding: 10px 2rem;
-  border-radius: 0 0 16px 16px;
+  border-radius: 15px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
@@ -84,7 +102,7 @@ body {
 }
 
 .fact-form {
-  background-color: var(--stone500-color);
+  background-color: var(--white-pure);
   margin-bottom: 2rem;
   padding: 1rem 2rem;
   display: flex;
@@ -99,7 +117,7 @@ body {
   padding: 1rem;
   color: inherit;
   font-family: inherit;
-  background-color: var(--stone400-color);
+  background-color: var(--white-smoke);
   border: none;
   border-radius: 100px;
 }
@@ -136,9 +154,8 @@ h1 {
 .fact {
   font-size: 1.2rem;
   line-height: 1.4;
-  background-color: var(--white-0);
-  /* color: #c9c8c7; */
-  color: var(--blue-catchy);
+  background-color: var(--white-pure);
+  color: var(--cornflower-blue);
   margin-bottom: 1rem;
   padding: 1rem 1.2rem;
   letter-spacing: -1px;
@@ -151,23 +168,13 @@ h1 {
   gap: 1.5rem;
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-
-  /* will-change: opacity, transform;
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d; */
-
-  /* opacity: 0.59585; */
-  /* transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
 }
 
 .tag {
   font-size: 1rem;
   text-transform: uppercase;
   font-family: 'Coiny', sans-serif;
-  color: var(--stone600-color);
+  color: var(--cornflower-blue);
   padding: 3px 10px 0 10px;
   border-radius: 100px;
 }
@@ -180,7 +187,7 @@ h1 {
 }
 
 .vote-button button {
-  background-color: var(--stone400-color);
+  background-color: var(--white-smoke);
   color: inherit;
   font-family: inherit;
   font-size: 1.2rem;
@@ -193,7 +200,7 @@ h1 {
 }
 
 .vote-button button:hover {
-  background-color: var(--stone600-color);
+  background-color: var(--cornflower-blue);
 }
 
 ul {
@@ -203,21 +210,22 @@ ul {
 .source:link,
 .source:visited {
   margin-left: 10px;
-  color: var(--stone600-color);
+  color: var(--blue-catchy);
   text-decoration: none;
   transition: 0.3s;
 }
 
 .source:hover,
 .source:active {
-  color: var(--hover-color);
+  color: var(--cornflower-blue);
 }
 
 .btn {
   font-size: 1.1rem;
   font-family: 'Coiny', sans-serif;
   text-transform: uppercase;
-  background-image: linear-gradient(
+  background-color: var(--white-pure);
+  /* background-image: linear-gradient(
     135deg,
     #fed7aa,
     #d9f99d,
@@ -225,13 +233,13 @@ ul {
     #c7d2fe,
     #ddd6fe,
     #fbcfe8
-  );
+  ); */
   border: none;
   border-radius: 100px;
   cursor: pointer;
   padding: 1rem 0 13px;
   transition: all 0.3s;
-  color: var(--stone500-color);
+  color: var(--cornflower-blue);
 }
 
 .btn:hover {
