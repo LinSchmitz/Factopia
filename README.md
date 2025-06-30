@@ -1,6 +1,4 @@
-# Crash Course: Build a Full-Stack Web App in a Weekend!
-
-This is a 12 hours course on Udemy made by Jonas Schedtmann.
+# Factopia
 
 ### Content of the course
 
@@ -9,7 +7,7 @@ This is a 12 hours course on Udemy made by Jonas Schedtmann.
 - Storing the data in a Supabase database
 - JavaScript
 - React
-- Deploy the app in Netlify
+- Deploy the app in Netlify.Vercel
 
 ### Overview of the functions of the website
 
@@ -17,4 +15,6 @@ This is a 12 hours course on Udemy made by Jonas Schedtmann.
 - vote the fact
 - sort the facts by categories
 
-<img width="1216" alt="Screenshot 2022-12-26 at 14 25 25" src="img/1.png">
+### 📷
+
+![alt text](img/factopia.png)
