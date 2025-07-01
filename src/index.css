@@ -1,68 +1,296 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* 🎨 Base Backgrounds and Stone Tones */
+  --background-color: #44403c; /* stone-700 */
+  --stone-600: #57534e;
+  --stone-500: #78716c;
+  --stone-400: #a8a29e;
+  --stone-200: #e7e5e4;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* ⚪️ Neutrals & Lights */
+  --white-pure: #ffffff;
+  --white-smoke: #f0f0f3;
+  --light: #fffef9;
+  --pearl: #f8f7f3;
+  --fog: #e6e7eb;
+  --cloud-grey: #d8d8d8;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* 🩶 Greys */
+  --grey: #80817f;
+  --color-test: #9c9c9c;
+  --warm-grey: #a0a09e;
+  --soft-charcoal: #5f5f5f;
+  --steel-grey: #6a6c70;
+
+  /* 🌫 Shadows & Transparency */
+  --shadow: #c7c2b366;
+  --transparent: #fff0;
+
+  /* 💙 Blues */
+  --cornflower-blue: #85a4c4;
+  --blue-catchy: #4943f0;
+  --sky-mist: #a1b8e0;
+  --deep-indigo: #3b3fce;
+  --storm-blue: #617d98;
+
+  /* 💚 Cool Muted Vibrants */
+  --light-steel-blue: #02aab0;
+  --plum: #00cdac;
+  --teal-ice: #8be0dc;
+  --cool-mint: #9de1d7;
+  --dusky-lavender: #7f9fbf;
+
+  /* 💜  Accent Colors */
+  --hover-color: #7e22ce;
+  --orange-color: #fed7aa;
+  --lime-color: #d9f99d;
+  --green-color: #bbf7d0;
+  --indigo-color: #c7d2fe;
+  --violet-color: #ddd6fe;
+  --pink-color: #fbcfe8;
+  --dusty-rose: #e0a9b0;
+  --muted-gold: #d6c589;
+  --sage-green: #a6b8a1;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  background-color: var(--white-smoke);
+  color: var(--cornflower-blue);
+  font-family: 'Sono', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 10px 2rem;
+  border-radius: 15px;
+
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* for Safari */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.fact-form {
+  background-color: var(--white-pure);
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.fact-form input,
+.fact-form select {
+  width: 14rem;
+  padding: 1rem;
+  color: inherit;
+  font-family: inherit;
+  background-color: var(--white-smoke);
+  border: none;
+  border-radius: 100px;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 1.1rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 16rem 2fr;
+  gap: 3rem;
+  padding-top: 1rem;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: 'Coiny', sans-serif;
+  margin-top: 6px;
+  line-height: 1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+.category {
+  margin-bottom: 1rem;
+}
+
+.fact {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  background-color: var(--white-pure);
+  color: var(--cornflower-blue);
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  letter-spacing: -1px;
+
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tag {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Coiny', sans-serif;
+  color: var(--cornflower-blue);
+  padding: 3px 10px 0 10px;
+  border-radius: 100px;
+}
+
+.vote-button {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.vote-button button {
+  background-color: var(--white-smoke);
+  color: inherit;
   font-family: inherit;
-  background-color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.vote-button button:hover {
+  background-color: var(--cornflower-blue);
+}
+
+ul {
+  list-style: none;
+}
+
+.source:link,
+.source:visited {
+  margin-left: 10px;
+  color: var(--blue-catchy);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.source:hover,
+.source:active {
+  color: var(--cornflower-blue);
+}
+
+.btn {
+  font-size: 1.1rem;
+  font-family: 'Coiny', sans-serif;
+  text-transform: uppercase;
+  background-color: var(--white-pure);
+  /* background-image: linear-gradient(
+    135deg,
+    #fed7aa,
+    #d9f99d,
+    #bbf7d0,
+    #c7d2fe,
+    #ddd6fe,
+    #fbcfe8
+  ); */
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 1rem 0 13px;
+  transition: all 0.3s;
+  color: var(--cornflower-blue);
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 1.5rem;
+  padding: 20px 32px 17px;
+}
+
+.btn-all {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.btn-sub {
+  width: 100%;
+  background-image: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 2rem 3rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
   }
 }
