@@ -67,7 +67,8 @@ async function loadFacts() {
     }
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
+  createFactList(data);
 }
 
 // createFactList(initialFacts);
@@ -84,7 +85,9 @@ function createFactList(dataArray) {
       >(Source)</a
     >
   </p>
-  <span class="tag" style="background-color: #aec6cf"
+  <span class="tag" style="background-color: ${
+    CATEGORIES.find(cat => cat.name === fact.category).color
+  } "
     >${fact.category}</span
   >
   </li> `
