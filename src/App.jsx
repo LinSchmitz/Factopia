@@ -78,6 +78,10 @@ function CategoryFilter() {
   return (
     <aside>
       <ul>
+        {' '}
+        <li class="category">
+          <button class="btn btn-all">All</button>
+        </li>
         {CATEGORIES.map(cat => (
           <li className="category">
             <button
