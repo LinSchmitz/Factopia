@@ -50,7 +50,7 @@ export default function App() {
     <div>
       <Header />
       <NewFactForm />
-      <main class="main">
+      <main className="main">
         <FactList />
         <CategoryFilter />
       </main>
@@ -83,18 +83,19 @@ function FactList() {
 
   return (
     <section>
-      <ul className="facts-list">
+      <ul className="facts-list" v>
         {facts.map(fact => (
-          <Fact fact={fact} />
+          <Fact fact={fact} key={fact.id} />
         ))}
       </ul>
+      <p>There are {facts.length} facts in the database. Add your own! </p>
     </section>
   );
 }
 
 function Fact({ fact }) {
   return (
-    <li className="fact" key={fact.id}>
+    <li className="fact">
       <p>
         {fact.text}
         <a className="source" href={fact.source} target="_blank">
