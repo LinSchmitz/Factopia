@@ -60,14 +60,15 @@ function Counter() {
 
 export default function App() {
   const [show, setShow] = useState(false);
+  const [facts, setFacts] = useState(initialFacts);
 
   return (
     <div>
       <Header show={show} setShow={setShow} />
-      {show && <NewFactForm />}
+      {show && <NewFactForm setFacts={setFacts} />}
       <main className="main">
         <CategoryFilter />
-        <FactList />
+        <FactList facts={facts} />
       </main>
     </div>
   );
@@ -90,7 +91,7 @@ function Header({ show, setShow }) {
   );
 }
 
-function NewFactForm() {
+function NewFactForm({ setFacts }) {
   const [text, setText] = useState('');
   const [source, setSource] = useState('');
   const [category, setCategory] = useState('');
@@ -118,8 +119,10 @@ function NewFactForm() {
         votesInteresting: 0,
         votesMindblowing: 0,
         votesFalse: 0,
-        createdIn: new Date().getUTCFullYear(),
+        createdIn: new Date().getFullYear(),
       };
+
+      setFacts(facts => [newFact, ...facts]);
     }
   }
 
@@ -184,9 +187,7 @@ function CategoryFilter() {
   );
 }
 
-function FactList() {
-  const [facts, setFacts] = useState(initialFacts);
-
+function FactList({ facts }) {
   return (
     <section>
       <ul className="facts-list">
