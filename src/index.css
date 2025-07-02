@@ -52,6 +52,11 @@
   --sage-green: #a6b8a1;
 }
 
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -62,11 +67,6 @@ body {
   background-color: var(--white-smoke);
   color: var(--cornflower-blue);
   font-family: 'Sono', sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .header {

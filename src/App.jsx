@@ -51,8 +51,8 @@ export default function App() {
       <Header />
       <NewFactForm />
       <main className="main">
-        <FactList />
         <CategoryFilter />
+        <FactList />
       </main>
     </div>
   );
@@ -75,7 +75,30 @@ function NewFactForm() {
 }
 
 function CategoryFilter() {
-  return <aside>CategoryFilter</aside>;
+  return (
+    <aside>
+      <ul>
+        {CATEGORIES.map(cat => (
+          <li className="category">
+            <button
+              className="btn btn-sub"
+              style={{ backgroundColor: cat.color }}
+            >
+              {cat.name}{' '}
+            </button>
+          </li>
+        ))}
+        {/* <li className="category">
+          <button
+            className="btn btn-sub"
+            style={{ backgroundColor: '#aec6cf' }}
+          >
+            technology
+          </button>
+        </li> */}
+      </ul>
+    </aside>
+  );
 }
 
 function FactList() {
