@@ -49,7 +49,7 @@ cd factopia
 
 # Install dependencies
 npm install
-
+npm i @supabase/supabase-js
 # Start development server
 npm start
 ```
