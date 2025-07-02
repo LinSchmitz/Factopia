@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import supabase from './supabas';
 
 const initialFacts = [
@@ -61,7 +61,16 @@ function Counter() {
 
 export default function App() {
   const [show, setShow] = useState(false);
-  const [facts, setFacts] = useState(initialFacts);
+  const [facts, setFacts] = useState([]);
+
+  useEffect(function () {
+    async function getFacts() {
+      const { data: facts, error } = await supabase.from('facts').select('*');
+      // console.log(facts);
+      setFacts(facts);
+    }
+    getFacts();
+  }, []);
 
   return (
     <div>
