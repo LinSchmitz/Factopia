@@ -85,28 +85,36 @@ function FactList() {
     <section>
       <ul className="facts-list">
         {facts.map(fact => (
-          <li className="fact" key={fact.id}>
-            <p>
-              {fact.text}
-              <a
-                className="source"
-                href="https://opensource.fb.com/"
-                target="_blank"
-              >
-                (Source)
-              </a>
-            </p>
-            <span className="tag" style={{ backgroundColor: '#aec6cf' }}>
-              {fact.category}
-            </span>
-            <div className="vote-button">
-              <button>👍 24</button>
-              <button>🤯 9</button>
-              <button>⛔️ 4</button>
-            </div>
-          </li>
+          <Fact fact={fact} />
         ))}
       </ul>
     </section>
+  );
+}
+
+function Fact({ fact }) {
+  return (
+    <li className="fact" key={fact.id}>
+      <p>
+        {fact.text}
+        <a className="source" href={fact.source} target="_blank">
+          (Source)
+        </a>
+      </p>
+      <span
+        className="tag"
+        style={{
+          backgroundColor: CATEGORIES.find(cat => cat.name === fact.category)
+            .color,
+        }}
+      >
+        {fact.category}
+      </span>
+      <div className="vote-button">
+        <button>👍{fact.votesInteresting} </button>
+        <button>🤯 {fact.votesMindblowing} </button>
+        <button>⛔️ {fact.votesFalse} </button>
+      </div>
+    </li>
   );
 }
