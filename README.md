@@ -2,7 +2,7 @@
 
 A simple React app for displaying interesting, mind-blowing, or false facts from various categories. Users can browse facts, see their sources, and vote on how each fact makes them feel. This project is ideal for learning React fundamentals like components, props, conditional rendering, and working with arrays.
 
-## 🚀 [Demo](linschmitz.github.io/Factopia/)
+## 🚀 [Demo](https://linschmitz.github.io/Factopia/)
 
 ## 🛠️ Tech Stack
 
