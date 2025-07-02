@@ -65,7 +65,7 @@ export default function App() {
   return (
     <div>
       <Header show={show} setShow={setShow} />
-      {show && <NewFactForm setFacts={setFacts} />}
+      {show && <NewFactForm setFacts={setFacts} setShow={setShow} />}
       <main className="main">
         <CategoryFilter />
         <FactList facts={facts} />
@@ -91,7 +91,7 @@ function Header({ show, setShow }) {
   );
 }
 
-function NewFactForm({ setFacts }) {
+function NewFactForm({ setFacts, setShow }) {
   const [text, setText] = useState('');
   const [source, setSource] = useState('');
   const [category, setCategory] = useState('');
@@ -123,6 +123,12 @@ function NewFactForm({ setFacts }) {
       };
 
       setFacts(facts => [newFact, ...facts]);
+
+      setText('');
+      setSource('');
+      setCategory('');
+
+      setShow(false);
     }
   }
 
