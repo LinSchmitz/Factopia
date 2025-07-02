@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const initialFacts = [
   {
@@ -45,10 +45,29 @@ const CATEGORIES = [
   { name: 'news', color: '#dcbdfb' }, // Lavender Pastel Purple
 ];
 
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  // function handleClick() {
+  //   click => click + 1;
+  //   setClick(click => click + 1);
+  // }
+
+  return (
+    <div>
+      <span style={{ fontSize: '40px' }}>{count} </span>
+      <button className="btn btn-large" onClick={() => setCount(count + 1)}>
+        +
+      </button>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div>
       <Header />
+      <Counter />
       <NewFactForm />
       <main className="main">
         <CategoryFilter />
@@ -79,16 +98,16 @@ function CategoryFilter() {
     <aside>
       <ul>
         {' '}
-        <li class="category">
-          <button class="btn btn-all">All</button>
+        <li className="category">
+          <button className="btn btn-all">All</button>
         </li>
         {CATEGORIES.map(cat => (
-          <li className="category">
+          <li className="category" key={cat.name}>
             <button
               className="btn btn-sub"
               style={{ backgroundColor: cat.color }}
             >
-              {cat.name}{' '}
+              {cat.name}
             </button>
           </li>
         ))}
