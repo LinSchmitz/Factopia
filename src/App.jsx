@@ -48,15 +48,10 @@ const CATEGORIES = [
 function Counter() {
   const [count, setCount] = useState(0);
 
-  // function handleClick() {
-  //   click => click + 1;
-  //   setClick(click => click + 1);
-  // }
-
   return (
     <div>
       <span style={{ fontSize: '40px' }}>{count} </span>
-      <button className="btn btn-large" onClick={() => setCount(count + 1)}>
+      <button className="btn btn-large" onClick={() => setCount(c => c + 1)}>
         +
       </button>
     </div>
@@ -64,11 +59,12 @@ function Counter() {
 }
 
 export default function App() {
+  const [show, setShow] = useState(false);
+
   return (
     <div>
-      <Header />
-      <Counter />
-      <NewFactForm />
+      <Header show={show} setShow={setShow} />
+      {show && <NewFactForm />}
       <main className="main">
         <CategoryFilter />
         <FactList />
@@ -77,14 +73,19 @@ export default function App() {
   );
 }
 
-function Header() {
+function Header({ show, setShow }) {
   return (
     <header className="header">
       <div className="logo">
         <img src="/img/logo.png" alt="logo" />
         <h1>Factopia</h1>
       </div>
-      <button className="btn btn-large btn-open">Share a fact</button>
+      <button
+        className="btn btn-large btn-open"
+        onClick={() => setShow(show => !show)}
+      >
+        {show ? 'Close' : 'Share a fact'}
+      </button>
     </header>
   );
 }
