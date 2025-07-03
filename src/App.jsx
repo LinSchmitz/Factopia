@@ -71,9 +71,15 @@ export default function App() {
   useEffect(function () {
     setIsLoading(true);
     async function getFacts() {
-      const { data: facts, error } = await supabase.from('facts').select('*');
+      const { data: facts, error } = await supabase
+        .from('facts')
+        .select('*')
+        .order('category', { ascending: true })
+        .limit(500);
+      console.log(error);
       // console.log(facts);
-      setFacts(facts);
+      if (!error) setFacts(facts);
+      else alert('There is a problem getting Data!');
       setIsLoading(false);
     }
     getFacts();
