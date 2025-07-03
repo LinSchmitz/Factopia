@@ -1,6 +1,6 @@
-# 🌍 Factopia
+# 📚 Factopia
 
-A simple React app for displaying interesting, mind-blowing, or false facts from various categories. Users can browse facts, see their sources, and vote on how each fact makes them feel. This project is ideal for learning React fundamentals like components, props, conditional rendering, and working with arrays.
+A simple React app and interactive platform to share and vote on interesting facts — built with **React** and **Supabase**. Users can browse facts, see their sources, and vote on how each fact makes them feel. This project is ideal for learning React fundamentals like components, props, conditional rendering, and working with arrays.
 
 ## 🚀 [Live Demo](https://factopia-sch.vercel.app/)
 
@@ -32,46 +32,101 @@ public/
     └── logo.png
 ```
 
-## 🔍 Features
+## 🚀 Features
 
-- ✅ View a list of curated facts
-- ✅ Categorized by topic (e.g., technology, society, science)
-- ✅ Voting system: 👍 Interesting, 🤯 Mind-blowing, ⛔️ False
-- ✅ Clickable source links
-- 🚧 Share your own facts (form UI prepared, logic TBD)
+- 📄 **Display facts** from a Supabase database
+- 🗳 **Vote** on facts (Interesting, Mind-blowing, or False)
+- ➕ **Submit your own facts** using a form with validation
+- 🧠 **Filter facts by category**
+- 🔄 **Real-time UI updates** after submitting or voting
+- 💅 Responsive, clean, and styled with CSS custom properties
+- 🔍 Smart logic to show "Disputed" label if fact is controversial
+- ⛔ Form is disabled during upload to avoid duplicates
 
-## 📦 Installation
+## 📦 Tech Stack
+
+- ⚛️ [React](https://reactjs.org/) (with Hooks)
+- 🛠 [Supabase](https://supabase.io/) (as the backend/database)
+- 🎨 Custom CSS using CSS variables and responsive grid
+- 🌐 Deployed on [Netlify/Vercel/etc.] _(Add your link if deployed)_
+
+---
+
+## 🖼 Categories Available
+
+- 🧪 Technology
+- 🧬 Science
+- 💰 Finance
+- 🧑‍🤝‍🧑 Society
+- 🎭 Entertainment
+- 🩺 Health
+- 🏛 History
+- 📰 News
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/factopia.git
+git clone https://github.com/yourusername/factopia.git
 cd factopia
 
-# Install dependencies
-npm install
-npm i @supabase/supabase-js
-# Start development server
-npm start
-```
+###  2. Install dependencies
 
-## build project
+npm install
+
+### 3. Setup Supabase
+
+Go to supabase.io and create a new project
+
+Create a table named facts with these columns:
+
+Column	Type
+id (PK)	integer (auto increment)
+text	text
+source	text
+category	text
+votesInteresting	integer
+votesMindblowing	integer
+votesFalse	integer
+createdIn	integer
+
+### Get your Supabase URL and Anon API Key and add them in a supabase.js file:
+
+
+// supabase.js
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://your-project-id.supabase.co';
+const supabaseKey = 'your-anon-key';
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+export default supabase;
+
+### 4. Run the app
+npm run dev
+# or
+npm start
+
++++++++++++++++
+## 📦 Installation
+
+### 5. build project
 
 npm run build
 
-## 🧠 Concepts Practiced
 
-- React functional components
-- `props` and `map()` rendering
-- JSX syntax
-- Styling with className and inline styles
-- Component composition and layout
 
 ## ✨ Future Improvements
 
-- [ ] Add form validation and fact submission
-- [ ] Connect to Supabase or Firebase for persistent data
-- [ ] Add dark mode
-- [ ] Responsive design
+
+-  🌙 Dark Mode Support
+-  📄 Pagination & Lazy Loading
+-  🔐 User Authentication
+-  📝 User-Generated Content
+-  🗳️ One-Vote-Per-User Enforcement
 
 ## 🙌 Acknowledgements
 
@@ -79,3 +134,4 @@ npm run build
 - Facts from reliable sources listed in each item.
 
 Let me know if you want a version in Markdown with styling or a Persian translation.
+```
