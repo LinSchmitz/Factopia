@@ -47,7 +47,7 @@ const CATEGORIES = [
 ];
 
 function Loader() {
-  return <p>Loading Data...</p>;
+  return <p className="message">Loading Data...</p>;
 }
 
 function Counter() {
