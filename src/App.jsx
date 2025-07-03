@@ -46,6 +46,10 @@ const CATEGORIES = [
   { name: 'news', color: '#dcbdfb' }, // Lavender Pastel Purple
 ];
 
+function Loader() {
+  return <p>Loading Data...</p>;
+}
+
 function Counter() {
   const [count, setCount] = useState(0);
 
@@ -62,12 +66,15 @@ function Counter() {
 export default function App() {
   const [show, setShow] = useState(false);
   const [facts, setFacts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(function () {
+    setIsLoading(true);
     async function getFacts() {
       const { data: facts, error } = await supabase.from('facts').select('*');
       // console.log(facts);
       setFacts(facts);
+      setIsLoading(false);
     }
     getFacts();
   }, []);
@@ -78,7 +85,7 @@ export default function App() {
       {show && <NewFactForm setFacts={setFacts} setShow={setShow} />}
       <main className="main">
         <CategoryFilter />
-        <FactList facts={facts} />
+        {isLoading ? <Loader /> : <FactList facts={facts} />}
       </main>
     </div>
   );
