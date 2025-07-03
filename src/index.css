@@ -67,6 +67,7 @@ body {
   background-color: var(--white-smoke);
   color: var(--cornflower-blue);
   font-family: 'Sono', sans-serif;
+  padding: 0px 64px 0px;
 }
 
 .header {
@@ -76,7 +77,7 @@ body {
   z-index: 1000;
 
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 5px;
   padding: 10px 2rem;
   border-radius: 15px;
 
@@ -136,7 +137,13 @@ body {
   display: grid;
   grid-template-columns: 16rem 2fr;
   gap: 3rem;
-  padding-top: 1rem;
+  padding: 1rem;
+  height: calc(90vh - 40px);
+}
+
+section {
+  overflow: scroll;
+  padding-bottom: 40px;
 }
 
 h1 {
@@ -225,11 +232,20 @@ ul {
 }
 
 .btn {
+  width: 12rem;
+  height: 2.5rem;
   font-size: 1.1rem;
+
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-family: 'Coiny', sans-serif;
   text-transform: uppercase;
   background-color: var(--white-pure);
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     135deg,
     #fed7aa,
     #d9f99d,
@@ -237,7 +253,7 @@ ul {
     #c7d2fe,
     #ddd6fe,
     #fbcfe8
-  ); */
+  );
   border: none;
   border-radius: 100px;
   cursor: pointer;
@@ -252,21 +268,27 @@ ul {
 
 .btn-large {
   font-size: 1.5rem;
-  padding: 20px 32px 17px;
+  width: 13rem;
+
+  /* padding: 20px 32px 17px; */
 }
 
 .btn-all {
   margin-bottom: 1rem;
-  width: 100%;
 }
 
 .btn-sub {
-  width: 100%;
   background-image: none;
 }
 
 .hidden {
   display: none !important;
+}
+
+.disputed {
+  color: var(--dusty-rose);
+  margin-right: 10px;
+  font-weight: 600;
 }
 
 .message {
@@ -287,7 +309,7 @@ ul {
 
 @media (max-width: 1000px) {
   body {
-    padding: 2rem 3rem;
+    /* padding: 2rem 3rem; */
   }
 
   .fact-form {
