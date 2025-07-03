@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import supabase from './supabas';
+import { Social } from './Social';
 
 const initialFacts = [
   {
@@ -50,19 +51,6 @@ function Loader() {
   return <p className="message">Loading Data...</p>;
 }
 
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <span style={{ fontSize: '40px' }}>{count} </span>
-      <button className="btn btn-large" onClick={() => setCount(c => c + 1)}>
-        +
-      </button>
-    </div>
-  );
-}
-
 export default function App() {
   const [show, setShow] = useState(false);
   const [facts, setFacts] = useState([]);
@@ -97,7 +85,12 @@ export default function App() {
       <Header show={show} setShow={setShow} />
       {show && <NewFactForm setFacts={setFacts} setShow={setShow} />}
       <main className="main">
-        <CategoryFilter setCurrCategory={setCurrCategory} />
+        <div>
+          <CategoryFilter setCurrCategory={setCurrCategory} />
+          <div className="social-div">
+            <Social />
+          </div>
+        </div>
         {isLoading ? (
           <Loader />
         ) : (

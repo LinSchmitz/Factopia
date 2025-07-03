@@ -127,6 +127,8 @@ npm run build
 -  🔐 User Authentication
 -  📝 User-Generated Content
 -  🗳️ One-Vote-Per-User Enforcement
+-  Destructuring
+
 
 ## 🙌 Acknowledgements
 
