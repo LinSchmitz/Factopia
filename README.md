@@ -54,6 +54,10 @@ npm i @supabase/supabase-js
 npm start
 ```
 
+## build project
+
+npm run build
+
 ## 🧠 Concepts Practiced
 
 - React functional components

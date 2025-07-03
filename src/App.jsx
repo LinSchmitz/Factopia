@@ -112,7 +112,8 @@ function Header({ show, setShow }) {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/img/logo.png" alt="logo" />
+        <button className="btn btn-logo"></button>
+        {/* <img src="/img/logo.png" alt="logo" /> */}
         <h1>Factopia</h1>
       </div>
       <button
