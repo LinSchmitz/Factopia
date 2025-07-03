@@ -203,6 +203,10 @@ h1 {
   background-color: var(--cornflower-blue);
 }
 
+.vote-button button:disabled {
+  background-color: var(--sky-mist);
+}
+
 ul {
   list-style: none;
 }
