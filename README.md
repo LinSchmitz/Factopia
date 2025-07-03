@@ -48,7 +48,7 @@ public/
 - ⚛️ [React](https://reactjs.org/) (with Hooks)
 - 🛠 [Supabase](https://supabase.io/) (as the backend/database)
 - 🎨 Custom CSS using CSS variables and responsive grid
-- 🌐 Deployed on [Netlify/Vercel/etc.] _(Add your link if deployed)_
+- 🌐 Deployed on [Netlify/Vercel/etc.]
 
 ---
 
