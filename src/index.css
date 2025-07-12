@@ -298,14 +298,6 @@ ul {
   font-weight: 600;
 }
 
-.message {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 600;
-  margin-top: 24px;
-}
-
 /*******footer ******/
 
 footer {
@@ -338,11 +330,25 @@ a {
 
 /*****  Loading  *******/
 
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
 .loader {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
 }
 
 .loader .loader_item {
